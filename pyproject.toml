@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ebay-shipping-calculator"
+version = "1.0.0"
+description = "Local-first CLI that estimates eBay shipping costs by weight, dimensions, and service tier with profit-margin hints."
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Asdale Dynamics, LLC"}]
+keywords = ["ebay", "shipping", "calculator", "cli", "reselling"]
+
+[project.scripts]
+ebay-shipping = "ebay_shipping_calculator.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ebay_shipping_calculator*"]
